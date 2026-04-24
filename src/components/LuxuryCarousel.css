@@ -1,0 +1,385 @@
+/* =====================
+   LUXURY CAROUSEL
+   ===================== */
+.luxury-carousel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 580px;
+    isolation: isolate;
+}
+
+/* Stacked card effect */
+.carousel-stack {
+    position: absolute;
+    border-radius: 24px;
+    background: color-mix(in srgb, var(--bg-secondary) 80%, transparent);
+    backdrop-filter: blur(10px);
+    border: 1px solid color-mix(in srgb, var(--border-primary) 80%, transparent);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.06);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-stack.stack-1 {
+    width: 94%;
+    height: 95%;
+    top: 5%;
+    left: 3%;
+    z-index: 1;
+    transform: rotate(1.4deg);
+}
+
+.carousel-stack.stack-2 {
+    width: 89%;
+    height: 91%;
+    top: 8.5%;
+    left: 5.5%;
+    z-index: 0;
+    transform: rotate(2.8deg);
+    opacity: 0.52;
+}
+
+.luxury-carousel:hover .carousel-stack.stack-1 {
+    transform: rotate(2deg) translateX(4px) translateY(-2px);
+}
+
+.luxury-carousel:hover .carousel-stack.stack-2 {
+    transform: rotate(3.4deg) translateX(8px) translateY(-3px);
+}
+
+/* Main display container */
+.carousel-display {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+/* Glass frame */
+.carousel-glass-frame {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--bg-secondary) 84%, transparent);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid color-mix(in srgb, var(--border-primary) 80%, transparent);
+    box-shadow:
+        0 24px 58px rgba(139, 92, 246, 0.14),
+        0 12px 36px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 color-mix(in srgb, var(--bg-secondary) 60%, #fff 40%);
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.luxury-carousel:hover .carousel-glass-frame {
+    box-shadow:
+        0 30px 76px rgba(139, 92, 246, 0.2),
+        0 16px 42px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 color-mix(in srgb, var(--bg-secondary) 58%, #fff 42%);
+    transform: translateY(-6px);
+}
+
+/* Image area */
+.carousel-image-area {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10.2;
+    overflow: hidden;
+}
+
+/* Slide */
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: scale(1.035);
+    transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1), transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(1.04) contrast(1.02);
+}
+
+/* Overlay gradient at bottom */
+.carousel-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 58%;
+    background: linear-gradient(transparent 10%, rgba(0, 0, 0, 0.62) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.carousel-overlay-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 28%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), transparent);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.carousel-floating-ui {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carousel-chip {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #e2e8f0;
+    background: rgba(18, 20, 30, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(8px);
+}
+
+.carousel-label-wrap {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 14px;
+    z-index: 6;
+}
+
+/* Label */
+.carousel-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.42rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(10, 12, 18, 0.42);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(8px);
+    z-index: 2;
+    animation: labelSlide 0.5s ease;
+}
+
+@keyframes labelSlide {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carousel-label-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #8b5cf6;
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.75);
+}
+
+.carousel-label span:last-child {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 650;
+    letter-spacing: 0.01em;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+}
+
+.carousel-progress {
+    position: relative;
+    margin-top: 9px;
+    width: 100%;
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+.carousel-progress-fill {
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    animation: carouselProgress 4s linear;
+    background: linear-gradient(90deg, #8b5cf6 0%, #22d3ee 100%);
+}
+
+.carousel-progress.paused .carousel-progress-fill {
+    animation-play-state: paused;
+}
+
+@keyframes carouselProgress {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+/* Navigation arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--bg-secondary) 84%, transparent);
+    backdrop-filter: blur(10px);
+    border: 1px solid color-mix(in srgb, var(--border-primary) 80%, transparent);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 5;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+}
+
+.luxury-carousel:hover .carousel-arrow {
+    opacity: 1;
+}
+
+.carousel-arrow:hover {
+    background: color-mix(in srgb, var(--bg-secondary) 96%, transparent);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+}
+
+.arrow-left {
+    left: -18px;
+}
+
+.arrow-right {
+    right: -18px;
+}
+
+/* Dots */
+.carousel-dots {
+    display: flex;
+    gap: 9px;
+    justify-content: center;
+    z-index: 3;
+    padding-top: 0.15rem;
+}
+
+.carousel-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1px solid color-mix(in srgb, #8b5cf6 35%, transparent);
+    background: color-mix(in srgb, var(--bg-secondary) 80%, transparent);
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-dot:hover {
+    border-color: #8b5cf6;
+    background: rgba(139, 92, 246, 0.2);
+}
+
+.carousel-dot.active {
+    background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+    border-color: transparent;
+    width: 26px;
+    border-radius: 100px;
+    box-shadow: 0 3px 10px rgba(139, 92, 246, 0.45);
+}
+
+/* Counter */
+.carousel-counter {
+    position: relative;
+    z-index: 6;
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+    padding: 6px 12px;
+    background: rgba(18, 20, 30, 0.55);
+    backdrop-filter: blur(10px);
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.counter-current {
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: white;
+}
+
+.counter-sep {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 1px;
+}
+
+.counter-total {
+    font-size: 0.74rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+@media (max-width: 1024px) {
+    .luxury-carousel {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    .luxury-carousel {
+        max-width: 100%;
+    }
+
+    .carousel-arrow {
+        opacity: 1;
+        width: 34px;
+        height: 34px;
+    }
+
+    .carousel-floating-ui {
+        top: 12px;
+        left: 12px;
+        right: 12px;
+    }
+
+    .carousel-label-wrap {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .arrow-left {
+        left: 10px;
+    }
+
+    .arrow-right {
+        right: 10px;
+    }
+
+    .carousel-stack {
+        display: none;
+    }
+}
