@@ -11,7 +11,7 @@ const detectInitialLanguage = () => {
     return storedLanguage;
   }
 
-  return navigator.language?.toLowerCase().startsWith('th') ? 'th' : 'en';
+  return 'en';
 };
 
 i18n.use(initReactI18next).init({
