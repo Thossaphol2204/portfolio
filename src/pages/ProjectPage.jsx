@@ -22,6 +22,7 @@ import Tv1 from '../project/Tv1.png';
 import Tv2 from '../project/Tv2.png';
 import Tv3 from '../project/Tv3.png';
 import Tv4 from '../project/Tv4.png';
+import Tv5 from '../project/Tv5.png';
 
 function ProjectPage() {
     const { t } = useTranslation();
@@ -29,7 +30,7 @@ function ProjectPage() {
     const projects = translatedProjects.map((project, index) => {
         if (index === 0) return { ...project, images: [facelab3, facelab0, facelab1, facelab2] };
         if (index === 1) return { ...project, images: [chat3, chat1, chat2] };
-        if (index === 2) return { ...project, images: [Tv1, Tv2, Tv3, Tv4] };
+        if (index === 2) return { ...project, images: [Tv1, Tv5, Tv2, Tv3, Tv4] };
         if (index === 3) return { ...project, images: [fit1, fit2, fit3, fit4, fit5, fit6] };
         return project;
     });
