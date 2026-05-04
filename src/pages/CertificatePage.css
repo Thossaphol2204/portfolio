@@ -87,4 +87,30 @@
 :root[data-theme='dark'] .cert-card-front-footer { border-top-color: rgba(148, 163, 184, 0.2); }
 
 @media (max-width: 1024px) { .cert-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 768px) { .cert-hero-title { font-size: 2rem; } .cert-grid { grid-template-columns: 1fr; } .cert-hero { padding: 3rem 0 1rem; } .cert-stats-row { flex-direction: column; gap: 1rem; } .cert-card { height: 360px; } }
+@media (max-width: 768px) { .cert-hero-title { font-size: 2rem; } .cert-grid { grid-template-columns: 1fr; } .cert-hero { padding: 3rem 0 1rem; } .cert-stats-row { flex-direction: column; gap: 1rem; padding: 1.2rem 1.5rem; } .cert-card { height: 360px; } }
+
+/* Small phones */
+@media (max-width: 480px) {
+    .cert-hero { padding: 1.5rem 0 0.75rem; }
+    .cert-hero-title { font-size: 1.65rem; }
+    .cert-hero-desc { font-size: 0.88rem; }
+    .cert-stats-row { border-radius: 14px; padding: 1rem 1.2rem; margin-bottom: 2rem; }
+    .cert-stat strong { font-size: 1.2rem; }
+    .cert-stat span { font-size: 0.76rem; }
+    .cert-grid-section { padding: 0 0 3rem; }
+    .cert-grid { gap: 1.2rem; }
+    .cert-card { height: 340px; }
+    .cert-card-front, .cert-card-back { border-radius: 18px; padding: 1.4rem; }
+    .cert-card-inner { border-radius: 18px; }
+    .cert-card-front-content h3 { font-size: 1.1rem; }
+    .cert-issuer { font-size: 0.85rem; }
+    .cert-date { font-size: 0.72rem; padding: 4px 10px; }
+    .cert-icon-wrapper { width: 52px; height: 52px; }
+    .cert-icon { font-size: 1.8rem; }
+    .cert-card-back-content h3 { font-size: 1.05rem; }
+    .cert-card-back-content p { font-size: 0.85rem; }
+    .cert-link { font-size: 0.85rem; padding: 10px; border-radius: 10px; }
+    .cert-image-banner { height: 180px; }
+    .cert-card-front.has-image .cert-card-front-content { padding: 1rem 1.4rem 0; }
+    .cert-card-front.has-image .cert-card-front-footer { padding: 0.75rem 1.4rem 1.2rem; }
+}

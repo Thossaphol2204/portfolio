@@ -54,7 +54,38 @@
 @media (max-width: 1024px) { .project-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 768px) { .project-hero-title { font-size: 2rem; } .project-grid { grid-template-columns: 1fr; } .project-hero { padding: 3rem 0 2rem; } }
 
-/* PROJECT MODAL & CARD UPDATES */
+/* Small phones */
+@media (max-width: 480px) {
+    .project-hero { padding: 1.5rem 0 1.2rem; }
+    .project-hero-title { font-size: 1.65rem; }
+    .project-hero-desc { font-size: 0.92rem; }
+    .project-grid-section { padding: 0 0 3rem; }
+    .project-grid { gap: 1rem; }
+    .project-card { padding: 1.4rem; border-radius: 14px; }
+    .project-card h3 { font-size: 1.05rem; }
+    .project-card p { font-size: 0.82rem; }
+    .project-icon-wrapper { width: 46px; height: 46px; }
+    .project-icon { font-size: 1.5rem; }
+    .project-tag { font-size: 0.7rem; padding: 3px 10px; }
+    .tech-stack-badge { font-size: 0.65rem; padding: 2px 8px; }
+    .tech-stack-label { font-size: 0.65rem; }
+    /* Modal - small phones */
+    .project-modal-overlay { padding: 0.5rem; }
+    .project-modal-content { max-height: calc(100vh - 1rem); border-radius: 18px; }
+    .project-modal-header { padding: 1.5rem 1.2rem 1.2rem; }
+    .project-modal-header h2 { font-size: 1.3rem; }
+    .project-modal-body { padding: 1.2rem 1.2rem 1.5rem; }
+    .project-modal-icon-wrapper { width: 56px; height: 56px; margin-bottom: 1rem; }
+    .project-modal-icon { font-size: 2rem; }
+    .project-modal-main-desc { font-size: 0.92rem; }
+    .project-modal-details-list li { font-size: 0.88rem; gap: 10px; }
+    .project-modal-tag { font-size: 0.78rem; padding: 5px 12px; }
+    .project-modal-desc-header h3 { font-size: 1rem; }
+    .project-paper-btn { font-size: 0.78rem; padding: 6px 14px; }
+    .project-modal-close { top: 1rem; right: 1rem; width: 34px; height: 34px; }
+    .slider-btn { width: 34px; height: 34px; }
+}
+
 .project-card-footer { margin-top: auto; padding-top: 1.25rem; border-top: 1px solid rgba(0, 0, 0, 0.05); display: flex; justify-content: flex-end; }
 .project-read-more { font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; gap: 6px; cursor: pointer; transition: gap 0.3s ease; }
 .project-card:hover .project-read-more { gap: 10px; }

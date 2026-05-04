@@ -437,15 +437,92 @@
     .resume-skills-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
+    .resume-hero { padding: 2.5rem 0 2rem; }
     .resume-hero-content { max-width: 100%; }
-    .resume-hero-desc { max-width: 100%; }
+    .resume-hero-desc { max-width: 100%; font-size: 0.95rem; line-height: 1.7; }
     .resume-hero-title { font-size: 2rem; }
-    .resume-contact-row { flex-direction: column; align-items: center; }
+    .resume-contact-row { flex-direction: column; align-items: center; gap: 0.6rem; }
+    .contact-item { font-size: 0.82rem; padding: 5px 12px; }
+    .download-btn { padding: 12px 24px; font-size: 0.92rem; }
     .section-title { font-size: 1.6rem; }
-    .tech-skill-grid { grid-template-columns: 1fr; }
-    .intern-modal-overlay { padding: 1rem; }
-    .intern-modal-content { max-height: 90vh; border-radius: 18px; }
+    .timeline-section { padding: 2.5rem 0; }
+    .timeline-column-title { font-size: 1.15rem; margin-bottom: 1.5rem; }
+    .timeline-item h3 { font-size: 1rem; }
+    .tech-skill-grid { grid-template-columns: 1fr 1fr; }
+    .tech-skills-card, .soft-skills-card { padding: 1.5rem; }
+    .project-exp-section { padding: 2.5rem 0; }
+    .project-exp-card { padding: 1.4rem; border-radius: 14px; }
+    .resume-skills-section { padding: 2.5rem 0 4rem; }
+    .section-header { margin-bottom: 2rem; }
+    .intern-modal-overlay { padding: 0.75rem; }
+    .intern-modal-content { max-height: 92vh; border-radius: 18px; }
     .intern-modal-header { padding: 1.5rem 1.5rem 1.2rem; border-radius: 18px 18px 0 0; }
     .intern-modal-body { padding: 1.2rem 1.5rem 1.5rem; }
     .intern-modal-header h2 { font-size: 1.1rem; }
+    .intern-modal-image { max-height: 240px; }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .resume-hero { padding: 1.5rem 0 1.2rem; }
+    .resume-hero-title { font-size: 1.65rem; margin-bottom: 0.75rem; }
+    .resume-hero-desc { font-size: 0.88rem; line-height: 1.65; margin-bottom: 1rem; }
+    .resume-contact-row { gap: 0.5rem; margin-bottom: 1.25rem; }
+    .contact-item { font-size: 0.78rem; padding: 4px 10px; gap: 4px; }
+    .download-btn { padding: 11px 22px; font-size: 0.88rem; border-radius: 12px; gap: 8px; }
+    .section-label { font-size: 0.76rem; padding: 5px 12px; }
+    .section-title { font-size: 1.35rem; }
+    .section-header { margin-bottom: 1.5rem; }
+    .timeline-section { padding: 1.5rem 0; }
+    .timeline-grid { gap: 2rem; }
+    .timeline-column-title { font-size: 1.05rem; margin-bottom: 1.2rem; gap: 8px; }
+    .timeline-icon { font-size: 1.15rem; }
+    .timeline-items { padding-left: 18px; }
+    .timeline-dot { left: -24px; width: 10px; height: 10px; border-width: 2px; box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.15); }
+    .timeline-item { padding-bottom: 1.5rem; }
+    .timeline-item h3 { font-size: 0.95rem; }
+    .timeline-year { font-size: 0.72rem; padding: 3px 10px; }
+    .timeline-place { font-size: 0.82rem; }
+    .timeline-bullets li { font-size: 0.82rem; line-height: 1.55; }
+    .intern-detail-btn { font-size: 0.78rem; padding: 5px 13px; }
+    .project-exp-section { padding: 1.5rem 0; }
+    .project-exp-grid { gap: 1rem; }
+    .project-exp-card { padding: 1.2rem; border-radius: 12px; }
+    .project-exp-header h3 { font-size: 0.95rem; }
+    .project-exp-period { font-size: 0.72rem; }
+    .project-exp-card p { font-size: 0.82rem; }
+    .project-exp-see-detail { font-size: 0.8rem; }
+    .resume-skills-section { padding: 1.5rem 0 3rem; }
+    .resume-skills-grid { gap: 1rem; }
+    .tech-skills-card, .soft-skills-card { padding: 1.2rem; border-radius: 14px; }
+    .tech-skills-card h3, .soft-skills-card h3 { font-size: 1rem; margin-bottom: 1rem; }
+    .tech-skill-grid { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+    .tech-skill-chip { padding: 0.6rem 0.75rem; border-radius: 10px; }
+    .tech-skill-name { font-size: 0.78rem; }
+    .soft-skill-tag { padding: 6px 12px; font-size: 0.76rem; }
+    .soft-skills-tags { gap: 0.4rem; margin-bottom: 1.5rem; }
+    .language-item { padding: 6px 10px; }
+    .language-item span:first-child { font-size: 0.82rem; }
+    .lang-level { font-size: 0.72rem; padding: 2px 8px; }
+    .tool-tag { padding: 5px 10px; font-size: 0.74rem; }
+    .tools-tags { gap: 0.35rem; }
+    .languages-section h4 { font-size: 0.88rem; }
+    /* Modal - small phones */
+    .intern-modal-overlay { padding: 0.5rem; }
+    .intern-modal-content { max-height: 94vh; border-radius: 16px; max-width: 100%; }
+    .intern-modal-header { padding: 1.2rem 1.2rem 1rem; border-radius: 16px 16px 0 0; gap: 12px; }
+    .intern-modal-icon { font-size: 1.6rem; width: 42px; height: 42px; border-radius: 12px; }
+    .intern-modal-header h2 { font-size: 1rem; }
+    .intern-modal-place { font-size: 0.82rem; }
+    .intern-modal-year { font-size: 0.7rem; }
+    .intern-modal-body { padding: 1rem 1.2rem 1.2rem; gap: 1.2rem; }
+    .intern-modal-image { max-height: 200px; }
+    .intern-slider-btn { width: 30px; height: 30px; }
+    .intern-section-title h3 { font-size: 0.9rem; }
+    .intern-section-icon { width: 28px; height: 28px; font-size: 1rem; border-radius: 8px; }
+    .intern-atmosphere-text { font-size: 0.82rem; padding: 0.8rem 1rem; }
+    .intern-detail-list li { font-size: 0.82rem; gap: 8px; }
+    .intern-learned-tag { padding: 5px 12px; font-size: 0.76rem; }
+    .intern-learned-tags { gap: 0.35rem; }
+    .intern-modal-close { top: 10px; right: 10px; width: 32px; height: 32px; }
 }

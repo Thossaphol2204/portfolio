@@ -118,3 +118,33 @@
     .section-title { font-size: 1.8rem; }
     .cta-buttons { flex-direction: column; align-items: center; }
 }
+
+/* Small phones */
+@media (max-width: 480px) {
+    .hero-section { padding: 1.5rem 0 2rem; }
+    .hero-title { font-size: 1.75rem; line-height: 1.2; margin-bottom: 1rem; }
+    .hero-desired-role-label { font-size: 0.88rem; }
+    .hero-badge { font-size: 0.76rem; padding: 6px 14px; margin-bottom: 1rem; }
+    .hero-description { font-size: 0.92rem; margin-bottom: 1.5rem; }
+    .hero-btn-primary, .hero-btn-secondary { padding: 12px 22px; font-size: 0.92rem; border-radius: 12px; }
+    .hero-mini-stats { gap: 1rem; margin-top: 1.5rem; padding-top: 1.2rem; }
+    .mini-stat strong { font-size: 0.95rem; }
+    .mini-stat span { font-size: 0.72rem; }
+    .mini-stat-divider { height: 24px; }
+    .skills-section { padding: 3rem 0; }
+    .section-title { font-size: 1.5rem; }
+    .section-subtitle { font-size: 0.95rem; }
+    .section-header { margin-bottom: 2.5rem; }
+    .skill-card { padding: 1.4rem; border-radius: 16px; }
+    .skill-card h3 { font-size: 1.05rem; }
+    .skill-card p { font-size: 0.82rem; margin-bottom: 1rem; }
+    .skill-icon-wrapper { width: 46px; height: 46px; margin-bottom: 1rem; }
+    .skill-icon { font-size: 1.5rem; }
+    .cta-card { padding: 1.8rem; border-radius: 20px; }
+    .cta-content h2 { font-size: 1.35rem; }
+    .cta-content p { font-size: 0.92rem; }
+    .cta-stat-item { padding: 1rem; border-radius: 14px; }
+    .cta-stat-number { font-size: 1.4rem; }
+    .cta-stat-label { font-size: 0.75rem; }
+    .cta-btn, .cta-btn-outline { padding: 12px 22px; font-size: 0.88rem; border-radius: 12px; }
+}

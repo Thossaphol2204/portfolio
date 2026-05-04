@@ -76,10 +76,31 @@
     .mobile-menu-btn { display: block; }
     .header-actions { gap: 0.4rem; }
     .logo { padding: 0.32rem 0.45rem; border-radius: 10px; }
-    .logo-text { font-size: 1.28rem; }
+    .logo-text { font-size: 1.15rem; }
     .language-toggle,
-    .theme-toggle { min-width: 86px; height: 36px; }
+    .theme-toggle { min-width: 82px; height: 34px; }
     .language-toggle { margin-left: auto; }
     .footer-content.single-row { flex-direction: column; text-align: center; }
     .footer-links.horizontal { justify-content: center; flex-wrap: wrap; gap: 1rem; }
+    .main-footer { padding: 2.5rem 0 1.5rem; }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .main-header { padding: 0.5rem 0; }
+    .logo { padding: 0.25rem 0.35rem; }
+    .logo-text { font-size: 1rem; }
+    .header-actions { gap: 0.3rem; }
+    .language-toggle,
+    .theme-toggle { min-width: 74px; height: 32px; }
+    .language-btn, .theme-btn { font-size: 0.72rem; padding: 0.18rem 0.38rem; }
+    .language-icon, .theme-icon { font-size: 0.8rem; }
+    .mobile-menu-btn { padding: 6px; }
+    .hamburger { width: 20px; gap: 4px; }
+    .footer-content.single-row { gap: 1.2rem; margin-bottom: 1.2rem; }
+    .footer-brand h3 { font-size: 1.1rem; }
+    .footer-brand p { font-size: 0.82rem; }
+    .footer-links.horizontal { gap: 0.75rem; }
+    .footer-links.horizontal a { font-size: 0.85rem; }
+    .footer-bottom { font-size: 0.78rem; padding-top: 1.2rem; }
 }
