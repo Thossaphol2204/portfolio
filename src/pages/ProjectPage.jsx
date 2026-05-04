@@ -9,6 +9,8 @@ import facelab0 from '../project/facelab0.png';
 import facelab1 from '../project/facelab1.png';
 import facelab2 from '../project/facelab2.png';
 import facelab3 from '../project/facelab3.png';
+import facelab4 from '../project/facelab4.png';
+import facelab5 from '../project/facelab5.png';
 import chat1 from '../project/chat0.png';
 import chat2 from '../project/chat1.png';
 import chat3 from '../project/chat3.png';
@@ -28,9 +30,9 @@ function ProjectPage() {
     const { t } = useTranslation();
     const translatedProjects = t('project.projects', { returnObjects: true });
     const projects = translatedProjects.map((project, index) => {
-        if (index === 0) return { ...project, images: [facelab3, facelab0, facelab1, facelab2] };
+        if (index === 0) return { ...project, images: [facelab3, facelab0, facelab1, facelab2, facelab4, facelab5] };
         if (index === 1) return { ...project, images: [chat3, chat1, chat2] };
-        if (index === 2) return { ...project, images: [Tv1, Tv5, Tv2, Tv3, Tv4] };
+        if (index === 2) return { ...project, images: [Tv1, superai, Tv5, Tv2, Tv3, Tv4] };
         if (index === 3) return { ...project, images: [fit1, fit2, fit3, fit4, fit5, fit6] };
         return project;
     });
