@@ -75,16 +75,16 @@
 .cert-link:hover svg { transform: translateX(3px) translateY(-3px); }
 .cert-link svg { transition: transform 0.3s ease; }
 
-:root[data-theme='dark'] .cert-card-front,
-:root[data-theme='dark'] .cert-card-back {
+:root:is([data-theme='dark'], [data-theme='halloween']) .cert-card-front,
+:root:is([data-theme='dark'], [data-theme='halloween']) .cert-card-back {
     background: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.82));
     border-color: rgba(148, 163, 184, 0.22);
 }
-:root[data-theme='dark'] .cert-card-front-content h3,
-:root[data-theme='dark'] .cert-card-back-content h3 { color: #e2e8f0; }
-:root[data-theme='dark'] .cert-card-back-content p,
-:root[data-theme='dark'] .cert-issuer { color: #b7c6dd; }
-:root[data-theme='dark'] .cert-card-front-footer { border-top-color: rgba(148, 163, 184, 0.2); }
+:root:is([data-theme='dark'], [data-theme='halloween']) .cert-card-front-content h3,
+:root:is([data-theme='dark'], [data-theme='halloween']) .cert-card-back-content h3 { color: #e2e8f0; }
+:root:is([data-theme='dark'], [data-theme='halloween']) .cert-card-back-content p,
+:root:is([data-theme='dark'], [data-theme='halloween']) .cert-issuer { color: #b7c6dd; }
+:root:is([data-theme='dark'], [data-theme='halloween']) .cert-card-front-footer { border-top-color: rgba(148, 163, 184, 0.2); }
 
 @media (max-width: 1024px) { .cert-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 768px) { .cert-hero-title { font-size: 2rem; } .cert-grid { grid-template-columns: 1fr; } .cert-hero { padding: 3rem 0 1rem; } .cert-stats-row { flex-direction: column; gap: 1rem; padding: 1.2rem 1.5rem; } .cert-card { height: 360px; } }

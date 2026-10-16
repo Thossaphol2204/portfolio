@@ -83,7 +83,7 @@
   --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-:root[data-theme='dark'] {
+:root:is([data-theme='dark'], [data-theme='halloween']) {
   --bg-primary: #0b1020;
   --bg-secondary: #10172a;
   --bg-tertiary: #1a2336;
@@ -107,6 +107,42 @@
   --footer-bg: #10172a;
   --toggle-bg: rgba(15, 23, 42, 0.75);
   --toggle-border: rgba(148, 163, 184, 0.35);
+}
+
+:root[data-theme='halloween'] {
+  --bg-primary: #12070a;
+  --bg-secondary: #1c0c10;
+  --bg-tertiary: #2a1210;
+  --bg-card: #1a0d11;
+  --bg-glass: rgba(28, 12, 16, 0.82);
+
+  --border-primary: #3b1d14;
+  --border-secondary: #5a2a14;
+  --border-accent: rgba(249, 115, 22, 0.45);
+
+  --text-primary: #fff4e6;
+  --text-secondary: #d6b89a;
+  --text-tertiary: #a07858;
+  --text-light: #6b4634;
+  --text-inverse: #12070a;
+
+  --gradient-primary: linear-gradient(135deg, #f97316 0%, #7c3aed 100%);
+  --gradient-secondary: linear-gradient(135deg, #fb923c 0%, #ef4444 100%);
+  --gradient-hover: linear-gradient(135deg, #fdba74 0%, #a78bfa 100%);
+
+  --accent-primary: #f97316;
+  --accent-secondary: #a855f7;
+  --accent-tertiary: #facc15;
+  --accent-glow: rgba(249, 115, 22, 0.28);
+
+  --header-bg: rgba(18, 7, 10, 0.78);
+  --header-bg-scrolled: rgba(18, 7, 10, 0.94);
+  --header-border: rgba(249, 115, 22, 0.28);
+  --header-mobile-bg: rgba(18, 7, 10, 0.98);
+  --footer-bg: #1c0c10;
+  --toggle-bg: rgba(42, 18, 16, 0.8);
+  --toggle-border: rgba(249, 115, 22, 0.4);
+  --shadow-glow: 0 0 24px rgba(249, 115, 22, 0.35);
 }
 
 * {

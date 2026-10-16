@@ -8,6 +8,8 @@ const translation = {
     dark: 'Dark',
     switchToLight: 'Switch to light theme',
     switchToDark: 'Switch to dark theme',
+    event: 'Event',
+    switchToEvent: 'Switch to Halloween event theme',
   },
   nav: {
     home: 'Home',

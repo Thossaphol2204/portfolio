@@ -36,20 +36,30 @@
 .project-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem; flex: 1; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 
-:root[data-theme='dark'] .tech-stack-badge {
+:root:is([data-theme='dark'], [data-theme='halloween']) .tech-stack-badge {
     background: rgba(139, 92, 246, 0.1);
     border-color: rgba(139, 92, 246, 0.2);
     color: #c7d5ea;
 }
-:root[data-theme='dark'] .tech-stack-badge:hover { background: rgba(139, 92, 246, 0.2); color: #a78bfa; }
+:root:is([data-theme='dark'], [data-theme='halloween']) .tech-stack-badge:hover { background: rgba(139, 92, 246, 0.2); color: #a78bfa; }
 
-:root[data-theme='dark'] .project-card {
+:root:is([data-theme='dark'], [data-theme='halloween']) .project-card {
     background: linear-gradient(180deg, rgba(15, 23, 42, 0.94), rgba(15, 23, 42, 0.82));
     border-color: rgba(148, 163, 184, 0.2);
     box-shadow: 0 14px 34px rgba(2, 6, 23, 0.42);
 }
-:root[data-theme='dark'] .project-card p { color: #b7c6dd; }
-:root[data-theme='dark'] .project-card-footer { border-top-color: rgba(148, 163, 184, 0.2); }
+:root:is([data-theme='dark'], [data-theme='halloween']) .project-card p { color: #b7c6dd; }
+:root:is([data-theme='dark'], [data-theme='halloween']) .project-card-footer { border-top-color: rgba(148, 163, 184, 0.2); }
+
+:root[data-theme='halloween'] .project-card {
+    background: linear-gradient(180deg, rgba(42, 18, 16, 0.94), rgba(18, 7, 10, 0.82));
+    border-color: rgba(249, 115, 22, 0.24);
+}
+:root[data-theme='halloween'] .tech-stack-badge {
+    background: rgba(249, 115, 22, 0.12);
+    border-color: rgba(249, 115, 22, 0.28);
+    color: #fdba74;
+}
 
 @media (max-width: 1024px) { .project-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 768px) { .project-hero-title { font-size: 2rem; } .project-grid { grid-template-columns: 1fr; } .project-hero { padding: 3rem 0 2rem; } }

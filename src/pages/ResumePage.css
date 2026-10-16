@@ -66,7 +66,7 @@ a.contact-item { text-decoration: none; color: inherit; }
 .tech-skill-chip.advanced .tech-skill-dot { background: #06b6d4; }
 .tech-skill-chip.solid .tech-skill-dot { background: #14b8a6; }
 
-:root[data-theme='dark'] .tech-skill-chip { background: linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.75)); border-color: rgba(148, 163, 184, 0.22); }
+:root:is([data-theme='dark'], [data-theme='halloween']) .tech-skill-chip { background: linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.75)); border-color: rgba(148, 163, 184, 0.22); }
 .soft-skills-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; }
 .soft-skill-tag { padding: 8px 16px; background: rgba(139, 92, 246, 0.06); border: 1px solid rgba(139, 92, 246, 0.12); border-radius: 100px; font-size: 0.82rem; font-weight: 600; color: #8b5cf6; transition: all 0.2s ease; animation: fadeInUp 0.4s ease both; }
 .soft-skill-tag:hover { background: rgba(139, 92, 246, 0.12); transform: translateY(-2px); }
@@ -83,41 +83,41 @@ a.contact-item { text-decoration: none; color: inherit; }
 .tool-tag { padding: 6px 14px; background: rgba(6, 182, 212, 0.06); border: 1px solid rgba(6, 182, 212, 0.12); border-radius: 100px; font-size: 0.8rem; font-weight: 600; color: #0891b2; }
 
 /* DARK THEME FIXES */
-:root[data-theme='dark'] .timeline-dot {
+:root:is([data-theme='dark'], [data-theme='halloween']) .timeline-dot {
     border-color: #0f172a;
     box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.28);
 }
 
-:root[data-theme='dark'] .project-exp-card,
-:root[data-theme='dark'] .tech-skills-card,
-:root[data-theme='dark'] .soft-skills-card {
+:root:is([data-theme='dark'], [data-theme='halloween']) .project-exp-card,
+:root:is([data-theme='dark'], [data-theme='halloween']) .tech-skills-card,
+:root:is([data-theme='dark'], [data-theme='halloween']) .soft-skills-card {
     background: linear-gradient(180deg, rgba(15, 23, 42, 0.94), rgba(15, 23, 42, 0.82));
     border-color: rgba(148, 163, 184, 0.22);
     box-shadow: 0 14px 34px rgba(2, 6, 23, 0.42);
 }
 
-:root[data-theme='dark'] .project-exp-card p { color: #b7c6dd; }
-:root[data-theme='dark'] .project-exp-card:hover {
+:root:is([data-theme='dark'], [data-theme='halloween']) .project-exp-card p { color: #b7c6dd; }
+:root:is([data-theme='dark'], [data-theme='halloween']) .project-exp-card:hover {
     box-shadow: 0 20px 44px rgba(2, 6, 23, 0.56);
     border-color: rgba(139, 92, 246, 0.34);
 }
 
-:root[data-theme='dark'] .soft-skill-tag {
+:root:is([data-theme='dark'], [data-theme='halloween']) .soft-skill-tag {
     background: rgba(139, 92, 246, 0.14);
     border-color: rgba(139, 92, 246, 0.32);
     color: #d8ccff;
 }
 
-:root[data-theme='dark'] .languages-section h4 { border-bottom-color: rgba(148, 163, 184, 0.22); }
-:root[data-theme='dark'] .language-item {
+:root:is([data-theme='dark'], [data-theme='halloween']) .languages-section h4 { border-bottom-color: rgba(148, 163, 184, 0.22); }
+:root:is([data-theme='dark'], [data-theme='halloween']) .language-item {
     background: rgba(139, 92, 246, 0.14);
     border: 1px solid rgba(139, 92, 246, 0.24);
 }
-:root[data-theme='dark'] .lang-level {
+:root:is([data-theme='dark'], [data-theme='halloween']) .lang-level {
     background: rgba(139, 92, 246, 0.24);
     color: #dfd6ff;
 }
-:root[data-theme='dark'] .tool-tag {
+:root:is([data-theme='dark'], [data-theme='halloween']) .tool-tag {
     background: rgba(6, 182, 212, 0.16);
     border-color: rgba(6, 182, 212, 0.3);
     color: #9cecff;
@@ -326,15 +326,15 @@ a.contact-item { text-decoration: none; color: inherit; }
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
     transform: scale(1.2);
 }
-:root[data-theme='dark'] .intern-modal-image-wrapper {
+:root:is([data-theme='dark'], [data-theme='halloween']) .intern-modal-image-wrapper {
     background: rgba(255, 255, 255, 0.04);
     border-color: rgba(148, 163, 184, 0.12);
 }
-:root[data-theme='dark'] .intern-slider-btn {
+:root:is([data-theme='dark'], [data-theme='halloween']) .intern-slider-btn {
     background: rgba(15, 23, 42, 0.85);
     color: #e2e8f0;
 }
-:root[data-theme='dark'] .intern-slider-btn:hover {
+:root:is([data-theme='dark'], [data-theme='halloween']) .intern-slider-btn:hover {
     background: rgba(15, 23, 42, 0.95);
 }
 
@@ -394,38 +394,38 @@ a.contact-item { text-decoration: none; color: inherit; }
 }
 
 /* DARK THEME — INTERNSHIP MODAL */
-:root[data-theme='dark'] .intern-detail-btn {
+:root:is([data-theme='dark'], [data-theme='halloween']) .intern-detail-btn {
     background: rgba(139, 92, 246, 0.14);
     border-color: rgba(139, 92, 246, 0.3);
     color: #c4b5fd;
 }
-:root[data-theme='dark'] .intern-detail-btn:hover {
+:root:is([data-theme='dark'], [data-theme='halloween']) .intern-detail-btn:hover {
     background: rgba(139, 92, 246, 0.24);
 }
-:root[data-theme='dark'] .intern-modal-content {
+:root:is([data-theme='dark'], [data-theme='halloween']) .intern-modal-content {
     background: rgba(15, 23, 42, 0.96);
     border-color: rgba(148, 163, 184, 0.15);
     box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
 }
-:root[data-theme='dark'] .intern-modal-close {
+:root:is([data-theme='dark'], [data-theme='halloween']) .intern-modal-close {
     background: rgba(255, 255, 255, 0.08);
 }
-:root[data-theme='dark'] .intern-modal-header {
+:root:is([data-theme='dark'], [data-theme='halloween']) .intern-modal-header {
     background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(6, 182, 212, 0.06) 100%);
     border-bottom-color: rgba(148, 163, 184, 0.12);
 }
-:root[data-theme='dark'] .intern-modal-icon {
+:root:is([data-theme='dark'], [data-theme='halloween']) .intern-modal-icon {
     background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(6, 182, 212, 0.2));
 }
-:root[data-theme='dark'] .intern-atmosphere-text {
+:root:is([data-theme='dark'], [data-theme='halloween']) .intern-atmosphere-text {
     background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(6, 182, 212, 0.06));
     color: #cbd5e1;
 }
-:root[data-theme='dark'] .intern-section-icon {
+:root:is([data-theme='dark'], [data-theme='halloween']) .intern-section-icon {
     background: rgba(139, 92, 246, 0.16);
 }
-:root[data-theme='dark'] .intern-detail-list li { color: #b7c6dd; }
-:root[data-theme='dark'] .intern-learned-tag {
+:root:is([data-theme='dark'], [data-theme='halloween']) .intern-detail-list li { color: #b7c6dd; }
+:root:is([data-theme='dark'], [data-theme='halloween']) .intern-learned-tag {
     background: rgba(6, 182, 212, 0.14);
     border-color: rgba(6, 182, 212, 0.28);
     color: #67e8f9;

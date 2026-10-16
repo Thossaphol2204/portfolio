@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import LanguageToggle from './LanguageToggle';
 import ThemeToggle from './ThemeToggle';
 import FloatingMascot from './FloatingMascot';
+import { CURRENT_EVENT, isEventTheme, isValidTheme } from '../theme/eventTheme';
 import './Layout.css';
 
 function Layout() {
@@ -14,7 +15,7 @@ function Layout() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [theme, setTheme] = useState(() => {
         const savedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
-        return savedTheme === 'dark' ? 'dark' : 'light';
+        return isValidTheme(savedTheme) ? savedTheme : 'light';
     });
 
     useEffect(() => {
@@ -40,7 +41,19 @@ function Layout() {
     ];
 
     return (
-        <div className="layout">
+        <div className={`layout ${isEventTheme(theme) ? `event-theme event-${theme}` : ''}`}>
+            {isEventTheme(theme) && (
+                <div className="event-fx" aria-hidden="true">
+                    {CURRENT_EVENT.decorations.map((symbol, index) => (
+                        <span
+                            key={`${symbol}-${index}`}
+                            className={`event-fx-item event-fx-${index + 1}`}
+                        >
+                            {symbol}
+                        </span>
+                    ))}
+                </div>
+            )}
             <FloatingMascot />
             <header className={`main-header ${scrolled ? 'scrolled' : ''}`}>
                 <div className="header-gradient-border"></div>
