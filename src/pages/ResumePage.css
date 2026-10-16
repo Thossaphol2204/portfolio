@@ -8,6 +8,7 @@
 .resume-hero-desc { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.75; max-width: 1040px; margin: 0 auto 1.5rem; }
 .resume-contact-row { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; margin-bottom: 2rem; }
 .contact-item { display: flex; align-items: center; gap: 6px; font-size: 0.88rem; color: var(--text-secondary); font-weight: 500; padding: 6px 14px; background: rgba(139, 92, 246, 0.06); border: 1px solid rgba(139, 92, 246, 0.1); border-radius: 100px; }
+a.contact-item { text-decoration: none; color: inherit; }
 .download-btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; font-weight: 700; font-size: 1rem; border-radius: 14px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.35); }
 .download-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(139, 92, 246, 0.45); color: white; }
 
