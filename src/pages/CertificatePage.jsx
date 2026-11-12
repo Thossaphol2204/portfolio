@@ -2,6 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import AnimatedBackground from '../components/AnimatedBackground';
 import './CertificatePage.css';
+import sfPlatformAdmin from '../cer/sf_platform_admin.png';
+import sfAgentforceSpecialist from '../cer/sf_agentforce_specialist.png';
+import sfData360Consultant from '../cer/sf_data_360_consultant.png';
 import superai from '../cer/Thossaphol_superai.png';
 import Goodgrade from '../cer/D.png';
 import reward from '../pic/reward1.jpg';
@@ -11,20 +14,27 @@ import mathlab from '../cer/mathlab.png';
 import idcl from '../cer/idcl.png';
 import link from '../cer/link.png';
 
+const CERTIFICATE_IMAGES = [
+    sfPlatformAdmin,
+    sfAgentforceSpecialist,
+    sfData360Consultant,
+    superai,
+    idcl,
+    link,
+    clound,
+    app,
+    mathlab,
+    reward,
+    Goodgrade,
+];
+
 function CertificatePage() {
     const { t } = useTranslation();
     const translatedCertificates = t('certificate.certificates', { returnObjects: true });
-    const certificates = translatedCertificates.map((cert, index) => {
-        if (index === 0) return { ...cert, image: superai };
-        if (index === 1) return { ...cert, image: idcl };
-        if (index === 2) return { ...cert, image: link };
-        if (index === 3) return { ...cert, image: clound };
-        if (index === 4) return { ...cert, image: app };
-        if (index === 5) return { ...cert, image: mathlab };
-        if (index === 6) return { ...cert, image: reward };
-        if (index === 7) return { ...cert, image: Goodgrade };
-        return cert;
-    });
+    const certificates = translatedCertificates.map((cert, index) => ({
+        ...cert,
+        image: CERTIFICATE_IMAGES[index] || null,
+    }));
     const [isVisible, setIsVisible] = useState(false);
     const gridRef = useRef(null);
     const [gridVisible, setGridVisible] = useState(false);
@@ -96,6 +106,23 @@ function CertificatePage() {
                                             <span className="cert-category" style={{ background: `${cert.color}15`, color: cert.color, borderColor: `${cert.color}30` }}>{cert.category}</span>
                                             <p>{cert.desc}</p>
                                         </div>
+                                        {cert.credential && cert.credential !== '#' && (
+                                            <a
+                                                href={cert.credential}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="cert-link"
+                                                style={{ background: cert.color }}
+                                                onClick={(e) => e.stopPropagation()}
+                                            >
+                                                {t('certificate.viewCredential')}
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                                    <polyline points="15 3 21 3 21 9" />
+                                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                                </svg>
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             </div>

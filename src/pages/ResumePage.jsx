@@ -198,7 +198,7 @@ function ResumePage() {
                             <div className="languages-section">
                                 <h4>{t('resume.toolsPlatforms')}</h4>
                                 <div className="tools-tags">
-                                    {["Git", "Figma", "Postman", "MobaXterm", "Vercel", "Docker"].map((tool, i) => (
+                                    {["Salesforce", "Agentforce", "Data 360", "Git", "Figma", "Postman", "MobaXterm", "Vercel", "Docker"].map((tool, i) => (
                                         <span key={i} className="tool-tag">{tool}</span>
                                     ))}
                                 </div>
