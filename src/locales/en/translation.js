@@ -315,6 +315,10 @@ const translation = {
     award: 'Award',
     viewDetails: 'View Details',
     viewCredential: 'View Credential',
+    filterByYear: 'Year',
+    allYears: 'All',
+    sortNewest: 'Newest First',
+    sortOldest: 'Oldest First',
     certificates: [
       {
         category: 'Technical Skill',
@@ -428,7 +432,7 @@ const translation = {
       },
       {
         category: 'Award',
-        icon: '📊',
+        icon: '🎓',
         title: 'First-Class Honors',
         issuer: 'University Recognition',
         date: '2026',

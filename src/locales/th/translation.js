@@ -317,6 +317,10 @@ const translation = {
     award: 'รางวัล',
     viewDetails: 'ดูรายละเอียด',
     viewCredential: 'ดูใบรับรอง',
+    filterByYear: 'ปี',
+    allYears: 'ทั้งหมด',
+    sortNewest: 'ใหม่ → เก่า',
+    sortOldest: 'เก่า → ใหม่',
     certificates: [
       {
         category: 'ทักษะเทคนิค',
@@ -430,7 +434,7 @@ const translation = {
       },
       {
         category: 'รางวัล',
-        icon: '📊',
+        icon: '🎓',
         title: 'เกียรตินิยมอันดับหนึ่ง',
         issuer: 'University Recognition',
         date: '2026',
